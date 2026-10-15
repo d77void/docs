@@ -34,7 +34,7 @@ used for Utumno's own actions.
 |---|---|
 | Alt + Shift + Return | terminal |
 | Alt + P | menu (`wmenu-run`) |
-| Alt + , (comma) | drop-down terminal |
+| Alt + \` (grave) | drop-down terminal |
 | Super + Space | application launcher |
 | Super + R | d77run |
 | Super + T | lock screen |
@@ -54,10 +54,16 @@ used for Utumno's own actions.
 | Alt + 1 … 9 | go to tag |
 | Alt + Shift + 1 … 9 | move window to tag |
 | Alt + 0 | show all tags |
+| Alt + , / Alt + . | focus the monitor on the left / right |
 | Alt + Tab | back to the previous tags |
 | Print | screenshot to `~/screenshot-<date>-<time>.png` |
 | Alt + Shift + R | reload `config.lua` |
 | Alt + Shift + Q | quit wasp |
+
+The drop-down terminal key is the one with `` ` `` on a US keyboard, left of
+1. Installations made from ISOs built before 16 October 2026 have it on
+Alt + , instead, where it also stops Alt + , from focusing the left monitor;
+change `"comma"` to `"grave"` in its `toggle-scratchpad` line to match.
 
 ## Idle
 
