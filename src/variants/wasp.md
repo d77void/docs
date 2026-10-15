@@ -13,6 +13,7 @@ shell on top (bar, launcher, lock screen, session menu, wallpaper picker) is
 | Shell (bar, launcher, menus) | Utumno, through `qsd77` |
 | Notifications | dunst |
 | Run dialog | d77run, and `wmenu-run` as the plain menu |
+| Lock screen | Utumno's, with Super + T or after 5 minutes idle |
 
 ## Where to change things
 
@@ -57,6 +58,30 @@ used for Utumno's own actions.
 | Print | screenshot to `~/screenshot-<date>-<time>.png` |
 | Alt + Shift + R | reload `config.lua` |
 | Alt + Shift + Q | quit wasp |
+
+## Idle
+
+After 5 minutes without input the screen locks, after 5.5 it turns off
+(any key or mouse movement turns it back on), and it always locks before the
+computer suspends. A full-screen video keeps it awake. This is the `swayidle`
+entry in `wasp.autostart`; change the numbers of seconds there.
+
+Installations made from ISOs built before 16 October 2026 do not have it. To
+add it, install the two programs:
+
+```sh
+sudo xbps-install -S swayidle wlopm
+```
+
+and add this entry to `wasp.autostart` in `config.lua`, then log out and in
+again:
+
+```lua
+{ "swayidle", "-w",
+  "timeout", "300", "qsd77 -c utumno locker",
+  "timeout", "330", "wlopm --off '*'", "resume", "wlopm --on '*'",
+  "before-sleep", "qsd77 -c utumno locker" },
+```
 
 ## Wallpaper
 
