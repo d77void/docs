@@ -11,7 +11,7 @@ vertically.
 | Bar | Waybar |
 | Launchers | fuzzel, nwggrid, d77run |
 | Notifications | dunst |
-| Lock screen | swaylock, with Super + T or after 5 minutes idle |
+| Lock screen | swaylock, with Super + T or after 5 minutes idle; screen off after 10 |
 | Browser | Brave |
 
 ## Where to change things
@@ -62,6 +62,22 @@ Programs started with the session are the `spawn-at-startup` lines in
 | Super + Shift + 7 | list of shortcuts |
 
 Volume and microphone keys work, also on the lock screen.
+
+## Idle
+
+After 5 minutes without input the screen locks (swaylock), after 10 it turns
+off and comes back on with any input, and it always locks before the computer
+suspends. This is `/usr/bin/screenlock`, started with the session.
+
+On installations made from ISOs built before 16 October 2026 the screen
+locks but never turns off. To fix it, install `wlopm`:
+
+```sh
+sudo xbps-install -S wlopm
+```
+
+and, in `/usr/bin/screenlock`, replace both `swaymsg "output * power off"`
+and `swaymsg "output * power on"` with `wlopm --off '*'` and `wlopm --on '*'`.
 
 ## Keyboard layout
 
