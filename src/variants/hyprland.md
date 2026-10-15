@@ -11,7 +11,7 @@ rounded corners. In d77void its configuration is written in **Lua**
 | Bar | Waybar |
 | Launchers | fuzzel, nwggrid, d77run |
 | Notifications | dunst |
-| Lock screen | hyprlock, with Super + T (there is no automatic lock when idle) |
+| Lock screen | hyprlock, with Super + T or after 5 minutes idle (hypridle) |
 | File manager, mail, browser | PCManFM, Geary, Brave (Firefox on musl) |
 
 ## Where to change things
@@ -21,6 +21,7 @@ rounded corners. In d77void its configuration is written in **Lua**
 | keys, programs started with the session, keyboard, monitors, look | `~/.config/hypr/hyprland.lua` |
 | the bar | `~/.config/waybar/config_hypr.jsonc` and the style files next to it |
 | lock screen | `~/.config/hypr/hyprlock.conf` |
+| idle: dim, lock, screen off | `~/.config/hypr/hypridle.conf` |
 | fuzzel launcher and power menu | `~/.config/fuzzel/` |
 | wallpaper at start-up | `~/.azotebg-hyprland` |
 
@@ -67,6 +68,33 @@ applies the file as soon as it is saved. The originals are in
 | Super + left / right mouse button | move / resize a window |
 
 Volume, microphone, brightness and media keys work, also on the lock screen.
+
+## Idle
+
+`hypridle` dims the screen after 2.5 minutes without input, locks it after
+5 and turns it off after 5.5; it also locks before the computer goes to
+sleep. Change the times in `hypridle.conf`.
+
+Installations made from ISOs built before 16 October 2026 do not start
+`hypridle`. To add it:
+
+1. In **d77-welcome**, add the **Hyprland Repository** if it is not there yet
+   (Hyprland's packages come from it).
+2. Install it:
+
+   ```sh
+   sudo xbps-install -S hypridle
+   ```
+
+3. In `~/.config/hypr/hyprland.lua`, inside `hl.on("hyprland.start", ...)`,
+   add the line:
+
+   ```lua
+   hl.exec_cmd("hypridle")
+   ```
+
+   It starts with the next session; to start it now, run `hypridle &` in a
+   terminal.
 
 ## Keyboard layout
 
