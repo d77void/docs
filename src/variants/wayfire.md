@@ -13,6 +13,7 @@ default, as on a classic desktop; the panel, dock and wallpaper come from
 | Run dialog | d77run |
 | Notifications | dunst |
 | Log-out screen | wlogout |
+| Lock screen | swaylock, with Super + T or after 5 minutes idle |
 | File manager, mail, browser | PCManFM, Geary, Brave |
 
 ## Where to change things
@@ -61,10 +62,20 @@ Volume and brightness keys work.
 
 ## Idle
 
-Wayfire's `idle` plugin starts a screensaver (the spinning cube) after 5
-minutes without input and turns the screen off after 10 (`[idle]` in
-`wayfire.ini`); a full-screen window prevents both. **Super + Z** switches
-this off and on. Lock the screen with **Super + T**.
+After 5 minutes without input the screen locks (swaylock, from the `idle =`
+line in `[autostart]`), and it always locks before the computer suspends.
+Wayfire's own `idle` plugin (`[idle]` in `wayfire.ini`) also starts a
+screensaver (the spinning cube) at 5 minutes and turns the screen off at 10;
+a full-screen window prevents both, and **Super + Z** switches them off and
+on.
+
+On installations made from ISOs built before 16 October 2026 the screen does
+not lock by itself. To fix it, replace the `idle =` line in `[autostart]`
+with:
+
+```ini
+idle = swayidle -w timeout 300 'swaylock -f' before-sleep 'swaylock -f'
+```
 
 ## Keyboard layout
 

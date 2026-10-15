@@ -12,8 +12,7 @@ file.
 | Bar | Waybar |
 | Launchers | fuzzel, nwggrid, d77run |
 | Notifications | dunst |
-
-There is no lock screen or idle lock in this variant.
+| Lock screen | swaylock, with Super + T or after 5 minutes idle; screen off after 10 |
 
 ## Where to change things
 
@@ -54,8 +53,24 @@ Most actions use **Alt**; workspace and session actions use **Super**.
 | Alt + Shift + Left / Right | focus the monitor on the left / right |
 | Super + left mouse button / right mouse button | move / resize a window |
 | Super + R | reload the configuration |
+| Super + T | lock screen |
 | Super + X | power menu |
 | Super + M | quit mango |
+
+## Idle
+
+After 5 minutes without input the screen locks, after 10 it turns off and
+comes back on with any input, and it always locks before the computer
+suspends. This is the `exec_once=swayidle …` line in `config.conf`.
+Installations made from ISOs built before 16 October 2026 have no lock
+screen; to add it, install `swaylock`, `swayidle` and `wlopm` and copy that
+line and the `bind=SUPER,t,spawn,swaylock -f` line from
+`/etc/skel/.config/mango/config.conf` of a newer ISO, or from this page:
+
+```text
+exec_once=swayidle -w timeout 300 'swaylock -f' timeout 600 "wlopm --off '*'" resume "wlopm --on '*'" before-sleep 'swaylock -f'
+bind=SUPER,t,spawn,swaylock -f
+```
 
 ## Keyboard layout
 
