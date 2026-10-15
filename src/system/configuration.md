@@ -48,6 +48,14 @@ changes the wallpaper is on its page; two helpers are shared:
 | `wswap-way` | sets a random image from `~/Wallpaper/` with `swaybg` (Wayland) |
 | `wswap-X` | the same with `feh` (X11) |
 
+## Web browser
+
+Key bindings, menus and bars open the browser through `d77-browser`, which
+runs whichever one is installed: Brave on glibc builds, LibreWolf on Plasma,
+Firefox on musl builds (ISOs built from 16 October 2026 on). To make those
+keys open another browser, change the command in your variant's configuration
+from `d77-browser` to the one you want, for example `firefox`.
+
 ## Power menu
 
 Most Wayland variants use `fuzzel-power-menu` (suspend, log out, reboot, shut

@@ -32,7 +32,7 @@ local terminal    = "kitty"
 local fileManager = "pcmanfm"
 local menu        = "fuzzel"
 local mail        = "geary"
-local web         = "brave-browser-stable"
+local web         = "d77-browser"
 ```
 
 Programs started with the session are the `hl.exec_cmd(...)` lines. Hyprland
