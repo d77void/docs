@@ -12,7 +12,7 @@ rounded corners. In d77void its configuration is written in **Lua**
 | Launchers | fuzzel, nwggrid, d77run |
 | Notifications | dunst |
 | Lock screen | hyprlock, with Super + T or after 5 minutes idle (hypridle) |
-| File manager, mail, browser | PCManFM, Geary, Brave (Firefox on musl) |
+| File manager, mail, browser | PCManFM, Geary, Brave |
 
 ## Where to change things
 

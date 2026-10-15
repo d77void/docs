@@ -20,8 +20,10 @@ Each variant is a separate ISO built around one window manager or desktop:
 
 These pages currently cover [wasp](../variants/wasp.md),
 [Plasma](../variants/plasma.md), [Sway](../variants/sway.md),
-[niri](../variants/niri.md) and [Hyprland](../variants/hyprland.md); more
-variants will follow.
+[niri](../variants/niri.md), [Hyprland](../variants/hyprland.md),
+[labwc](../variants/labwc.md), [mango](../variants/mango.md),
+[river](../variants/river.md), [spitfire](../variants/spitfire.md) and
+[Wayfire](../variants/wayfire.md); more variants will follow.
 
 d77void can be built for **glibc** (`x86_64`) and **musl** (`x86_64-musl`).
 glibc builds come with Brave (LibreWolf on Plasma); musl builds with Firefox.

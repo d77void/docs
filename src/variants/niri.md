@@ -11,8 +11,8 @@ vertically.
 | Bar | Waybar |
 | Launchers | fuzzel, nwggrid, d77run |
 | Notifications | dunst |
-| Lock screen | swaylock, after 5 minutes idle (screen off after 10) |
-| Browser | Brave (Firefox on musl) |
+| Lock screen | swaylock, with Super + T or after 5 minutes idle |
+| Browser | Brave |
 
 ## Where to change things
 

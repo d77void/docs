@@ -19,3 +19,8 @@
 - [Sway](variants/sway.md)
 - [niri](variants/niri.md)
 - [Hyprland](variants/hyprland.md)
+- [labwc](variants/labwc.md)
+- [mango](variants/mango.md)
+- [river](variants/river.md)
+- [spitfire](variants/spitfire.md)
+- [Wayfire](variants/wayfire.md)
