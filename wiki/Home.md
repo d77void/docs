@@ -8,7 +8,7 @@ Documentation for the d77void projects:
 - **[d77void Immutable Docs](Immutable Docs)**: d77void Immutable, where the
   system is a read-only image updated as a whole, with the previous version
   always there to go back to. Also at <https://d77void.github.io/immutable-docs/>.
-- **[D77orphaned Docs](Orphaned Docs)**: D77orphaned, a Void Linux live
+- **[d77orphaned Docs](Orphaned Docs)**: d77orphaned, a Void Linux live
   system for recovery, diagnostics and careful forensics, which does not
   touch the computer's disks unless asked to. Also at
   <https://d77void.github.io/orphaned-docs/>.
