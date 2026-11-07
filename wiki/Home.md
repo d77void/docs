@@ -1,6 +1,6 @@
 # d77void wiki
 
-Documentation for the two kinds of d77void:
+Documentation for the d77void projects:
 
 - **[d77void Docs](d77void Docs)**: d77void, Void Linux with a window manager
   or desktop already set up. What each variant brings and where to change
@@ -8,8 +8,13 @@ Documentation for the two kinds of d77void:
 - **[d77void Immutable Docs](Immutable Docs)**: d77void Immutable, where the
   system is a read-only image updated as a whole, with the previous version
   always there to go back to. Also at <https://d77void.github.io/immutable-docs/>.
+- **[D77orphaned Docs](Orphaned Docs)**: D77orphaned, a Void Linux live
+  system for recovery, diagnostics and careful forensics, which does not
+  touch the computer's disks unless asked to. Also at
+  <https://d77void.github.io/orphaned-docs/>.
 
 > These pages are copied from GitHub, where they are written and corrected:
-> [d77void/docs](https://github.com/d77void/docs) and
-> [d77void/immutable-docs](https://github.com/d77void/immutable-docs).
+> [d77void/docs](https://github.com/d77void/docs),
+> [d77void/immutable-docs](https://github.com/d77void/immutable-docs) and
+> [d77void/orphaned-docs](https://github.com/d77void/orphaned-docs).
 > Changes made here are overwritten.
