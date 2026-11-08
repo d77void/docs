@@ -10,8 +10,9 @@ Documentation for the d77void projects:
   always there to go back to. Also at <https://d77void.github.io/immutable-docs/>.
 - **[d77orphaned Docs](Orphaned Docs)**: d77orphaned, a Void Linux live
   system for recovery, diagnostics and careful forensics, which does not
-  touch the computer's disks unless asked to. Also at
-  <https://d77void.github.io/orphaned-docs/>.
+  touch the computer's disks unless asked to. A prototype. Also at
+  <https://d77void.github.io/orphaned-docs/>. Download:
+  [ISO-x86_64](https://sourceforge.net/projects/d77void/files/ISO-x86_64/).
 
 > These pages are copied from GitHub, where they are written and corrected:
 > [d77void/docs](https://github.com/d77void/docs),
